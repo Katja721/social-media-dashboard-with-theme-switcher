@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
     <link
       rel="icon"
       type="image/png"
@@ -15,76 +16,147 @@
     <title>Frontend Mentor | [Challenge Name Here]</title>
   </head>
   <body>
-    <h1 class="mainHeading">Social Media Dashboard</h1>
-    <p class="totalFollowers">Total Followers: 23,004</p>
-    <div class="mode">
-      <p class="mode-paragraph">Dark Mode</p>
-      <div class="switch">
-        <div class="circle"></div>
+    <header>
+      <div class="head">
+        <h1 class="mainHeading">Social Media Dashboard</h1>
+        <div class="mode">
+          <p class="mode-paragraph">Dark Mode</p>
+          <div class="switch">
+            <div class="circle"></div>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <p class="totalFollowers">Total Followers: 23,004</p>
+    </header>
     <section class="social-media">
-      <div class="facebook">
-        <span class="account">
-          <img src="/images/icon-facebook.svg" />
+      <div class="facebook stat">
+        <p class="account">
+          <img src="/images/icon-facebook.svg" class="social-logo" />
           @nathanf
-        </span>
+        </p>
         <div class="followers">
           <h2 class="numOfFollowers">1987</h2>
           <p class="followers-paragraph">Followers</p>
         </div>
-        <span class="diffrence">
+        <p class="diffrence progress">
           <img src="/images/icon-up.svg" />
           12 Today
-        </span>
+        </p>
       </div>
-      <div class="twitter">
-        <span class="account">
-          <img src="/images/icon-twitter.svg" />
+      <div class="twitter stat">
+        <p class="account">
+          <img src="/images/icon-twitter.svg" class="social-logo" />
           @nathanf
-        </span>
+        </p>
         <div class="followers">
           <h2 class="numOfFollowers">1044</h2>
           <p class="followers-paragraph">Followers</p>
         </div>
-        <span class="diffrence">
+        <p class="diffrence progress">
           <img src="/images/icon-up.svg" />
           99 Today
-        </span>
+        </p>
       </div>
-      <div class="instagram">
-        <span class="account">
-          <img src="/images/icon-instagram.svg" />
+      <div class="instagram stat">
+        <hr class="instagramBorder" />
+        <p class="account">
+          <img src="/images/icon-instagram.svg" class="social-logo" />
           @realnathanf
-        </span>
+        </p>
         <div class="followers">
           <h2 class="numOfFollowers">11k</h2>
           <p class="followers-paragraph">Followers</p>
         </div>
-        <span class="diffrence">
+        <p class="diffrence progress">
           <img src="/images/icon-up.svg" />
           1099 Today
-        </span>
+        </p>
       </div>
-      <div class="youtube">
-        <span class="account">
-          <img src="/images/icon-instagram.svg" />
+      <div class="youtube stat">
+        <p class="account">
+          <img src="/images/icon-youtube.svg" class="social-logo" />
           Nathan F.
-        </span>
+        </p>
         <div class="followers">
           <h2 class="numOfFollowers">8239</h2>
           <p class="followers-paragraph">Subscribers</p>
         </div>
-        <span class="diffrence">
-          <img src="/images/icon-up.svg" />
+        <p class="diffrence downgrade">
+          <img src="/images/icon-down.svg" />
           144 Today
-        </span>
+        </p>
       </div>
     </section>
 
-    Overview - Today Page Views 87 3% Likes 52 2% Likes 5462 2257% Profile Views
-    52k 1375% Retweets 117 303% Likes 507 553% Likes 107 19% Total Views 1407
-    12%
+    <h2 class="overview-heading">Overview - Today</h2>
+    <section class="overview">
+      <div class="fb-views">
+        <p class="ov-paragraph1 ov-paragraph">Page Views</p>
+        <img class="ov-icon1 ov-icon" src="/images/icon-facebook.svg" />
+        <h3 class="ov-num1 ov-num">87</h3>
+
+        <p class="ov-percent1 progress ov-percent">
+          <img src="/images/icon-up.svg" />3%
+        </p>
+      </div>
+      <div class="fb-likes">
+        <p class="ov-paragraph2 ov-paragraph">Likes</p>
+        <img class="ov-icon2 ov-icon" src="/images/icon-facebook.svg" />
+        <h3 class="ov-num2 ov-num">52</h3>
+        <p class="ov-percent2 downgrade ov-percent">
+          <img src="/images/icon-down.svg" />2%
+        </p>
+      </div>
+      <div class="ig-likes">
+        <p class="ov-paragrap3 ov-paragraph">Likes</p>
+        <img class="ov-icon3 ov-icon" src="/images/icon-instagram.svg" />
+        <h3 class="ov-num3 ov-num">5462</h3>
+        <p class="ov-percent3 progress ov-percent">
+          <img src="/images/icon-up.svg" />2257%
+        </p>
+      </div>
+      <div class="ig-views">
+        <p class="ov-paragrap4 ov-paragraph">Profile Views</p>
+        <img class="ov-icon4 ov-icon" src="/images/icon-instagram.svg" />
+        <h3 class="ov-num4 ov-num">52k</h3>
+        <p class="ov-percent4 progress ov-percent">
+          <img src="/images/icon-up.svg" />1375%
+        </p>
+      </div>
+      <div class="twittr-retweets">
+        <p class="ov-paragrap5 ov-paragraph">Retweets</p>
+        <img class="ov-icon5 ov-icon" src="/images/icon-twitter.svg" />
+        <h3 class="ov-num5 ov-num">117</h3>
+        <p class="ov-percent5 progress ov-percent">
+          <img src="/images/icon-up.svg" />303%
+        </p>
+      </div>
+      <div class="twittr-likes">
+        <p class="ov-paragrap6 ov-paragraph">Likes</p>
+        <img class="ov-icon6 ov-icon" src="/images/icon-twitter.svg" />
+        <h3 class="ov-num6 ov-num">507</h3>
+        <p class="ov-percent6 progress ov-percent">
+          <img src="/images/icon-up.svg" />553%
+        </p>
+      </div>
+      <div class="yt-likes">
+        <p class="ov-paragrap7 ov-paragraph">Likes</p>
+        <img class="ov-icon7 ov-icon" src="/images/icon-youtube.svg" />
+        <h3 class="ov-num7 ov-num">107</h3>
+        <p class="ov-percent7 downgrade ov-percent">
+          <img src="/images/icon-down.svg" />19%
+        </p>
+      </div>
+      <div class="yt-views">
+        <p class="ov-paragrap8 ov-paragraph">Total Views</p>
+        <img class="ov-icon8 ov-icon" src="/images/icon-youtube.svg" />
+        <h3 class="ov-num8 ov-num">1407</h3>
+        <p class="ov-percent8 downgrade ov-percent">
+          <img src="/images/icon-down.svg" />12%
+        </p>
+      </div>
+    </section>
 
     <div class="attribution">
       Challenge by

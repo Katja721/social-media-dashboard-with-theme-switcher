@@ -1,3 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+:root {
+  /* dark mode */
+  --very-dark-blue-bg: hsl(230, 17%, 14%);
+  --very-dark-blue-topbg: hsl(232, 19%, 15%);
+  --dark-desaturated-blue: hsl(228, 28%, 20%);
+  --desaturated-blue: hsl(228, 34%, 66%);
+  --white: hsl(0, 0%, 100%);
+  /* commpanies */
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(
+    90deg,
+    rgba(253, 196, 104, 1) 0%,
+    rgba(223, 73, 150, 1) 100%
+  );
+  --youtube: hsl(348, 97%, 39%);
+  /* diffrence */
+  --progress: hsl(163, 72%, 41%);
+  --downgrade: hsl(356, 69%, 56%);
+  /* toggle background */
+  --toggle: linear-gradient(
+    90deg,
+    rgba(55, 143, 230, 1) 0%,
+    rgba(62, 218, 130, 1) 100%
+  );
+}
+body {
+  margin: 0;
+  padding: 0.5rem 8rem 2rem 8rem;
+  font-family: "Inter", sans-serif;
+  background-color: var(--very-dark-blue-bg);
+  font-size: 14px;
+}
+header {
+  background-color: var(--very-dark-blue-topbg);
+  padding: 1rem 0 9rem 0;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  font-size: 0.8em;
+}
+.mainHeading {
+  margin: 0;
+  color: var(--white);
+}
+.mode-paragraph {
+  color: var(--desaturated-blue);
+  font-weight: 700;
+}
+.totalFollowers {
+  color: var(--desaturated-blue);
+  font-weight: 700;
+  margin: 0;
+  font-size: 0.8em;
+}
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--very-dark-blue-bg);
+  margin: -7rem 0 2rem 0;
+}
+.stat {
+  background-color: var(--dark-desaturated-blue);
+  padding: 1.5rem 4rem 1rem 4rem;
+  border-radius: 5px;
+}
+.facebook {
+  border-top: 3px solid var(--facebook);
+}
+.twitter {
+  border-top: 3px solid var(--twitter);
+}
+.instagramBorder {
+  background-image: var(--instagram);
+  position: absolute;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  border: none;
+  height: 3px;
+  width: 19.2%;
+  left: 40.6rem;
+  top: 7rem;
+}
+
+.youtube {
+  border-top: 3px solid var(--youtube);
+}
+.numOfFollowers {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 2em;
+  margin: 0.1rem 0;
+  text-align: center;
+}
+.followers-paragraph {
+  font-variant-caps: all-petite-caps;
+  color: var(--desaturated-blue);
+  letter-spacing: 0.3em;
+  margin: 0;
+  text-align: center;
+}
+.account {
+  color: var(--desaturated-blue);
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+.social-logo {
+  margin: 0 0.2rem -0.4rem 0.2rem;
+}
+.diffrence {
+  margin: 1.5rem 0 0rem 0;
+  text-align: center;
+  font-weight: 700;
+}
+.progress {
+  color: var(--progress);
+}
+.downgrade {
+  color: var(--downgrade);
+}
+.overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 25px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "fb-views fb-likes ig-likes ig-views"
+    "twittr-retweets twittr-likes yt-likes yt-views";
+  font-weight: 700;
+  padding: 0;
+}
+.overview-heading {
+  color: var(--white);
+  padding: 0;
+  margin: 0 0 -2rem 0;
+}
+.fb-views {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 10px 35px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ov-paragraph1 ov-icon1"
+    "ov-num1 ov-percent1";
+  grid-area: fb-views;
+  padding: 1rem;
+  margin: 3rem 0 0 0;
+  border-radius: 5px;
+}
+
+.ov-paragraph1 {
+  grid-area: ov-paragraph1;
+}
+
+.ov-icon1 {
+  grid-area: ov-icon1;
+}
+
+.ov-num1 {
+  grid-area: ov-num1;
+}
+
+.ov-percent1 {
+  grid-area: ov-percent1;
+}
+
+.fb-likes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 10px 35px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ov-paragraph2 ov-icon2"
+    "ov-num2 ov-percent2";
+  grid-area: fb-likes;
+  padding: 1rem 2rem;
+  margin: 3rem 0 0 0;
+  border-radius: 5px;
+}
+
+.ov-paragraph2 {
+  grid-area: ov-paragraph2;
+}
+
+.ov-icon2 {
+  grid-area: ov-icon2;
+}
+
+.ov-num2 {
+  grid-area: ov-num2;
+}
+
+.ov-percent2 {
+  grid-area: ov-percent2;
+}
+
+.ig-likes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 10px 35px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ov-paragrap3 ov-icon3"
+    "ov-num3 ov-percent3";
+  grid-area: ig-likes;
+  padding: 1rem 2rem;
+  margin: 3rem 0 0 0;
+  border-radius: 5px;
+}
+
+.ov-paragrap3 {
+  grid-area: ov-paragrap3;
+}
+
+.ov-icon3 {
+  grid-area: ov-icon3;
+}
+
+.ov-num3 {
+  grid-area: ov-num3;
+}
+
+.ov-percent3 {
+  grid-area: ov-percent3;
+  width: 115%;
+}
+
+.ig-views {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 10px 35px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ov-paragrap4 ov-icon4"
+    "ov-num4 ov-percent4";
+  grid-area: ig-views;
+  padding: 1rem 2rem;
+  margin: 3rem 0 0 0;
+  border-radius: 5px;
+}
+
+.ov-paragrap4 {
+  grid-area: ov-paragrap4;
+  width: 105%;
+}
+
+.ov-icon4 {
+  grid-area: ov-icon4;
+}
+
+.ov-num4 {
+  grid-area: ov-num4;
+}
+
+.ov-percent4 {
+  grid-area: ov-percent4;
+  width: 115%;
+}
+
+.twittr-retweets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 10px 35px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ov-paragrap5 ov-icon5"
+    "ov-num5 ov-percent5";
+  grid-area: twittr-retweets;
+  padding: 1rem 2rem;
+  margin: 0 0 3rem 0;
+  border-radius: 5px;
+}
+
+.ov-paragrap5 {
+  grid-area: ov-paragrap5;
+}
+
+.ov-icon5 {
+  grid-area: ov-icon5;
+}
+
+.ov-num5 {
+  grid-area: ov-num5;
+}
+
+.ov-percent5 {
+  grid-area: ov-percent5;
+}
+
+.twittr-likes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 10px 35px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ov-paragrap6 ov-icon6"
+    "ov-num6 ov-percent6";
+  grid-area: twittr-likes;
+  padding: 1rem 2rem;
+  margin: 0 0 3rem 0;
+  border-radius: 5px;
+}
+
+.ov-paragrap6 {
+  grid-area: ov-paragrap6;
+}
+
+.ov-icon6 {
+  grid-area: ov-icon6;
+}
+
+.ov-num6 {
+  grid-area: ov-num6;
+}
+
+.ov-percent6 {
+  grid-area: ov-percent6;
+}
+
+.yt-likes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 10px 35px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ov-paragrap7 ov-icon7"
+    "ov-num7 ov-percent7";
+  grid-area: yt-likes;
+  padding: 1rem 2rem;
+  margin: 0 0 3rem 0;
+  border-radius: 5px;
+}
+
+.ov-paragrap7 {
+  grid-area: ov-paragrap7;
+}
+
+.ov-icon7 {
+  grid-area: ov-icon7;
+}
+
+.ov-num7 {
+  grid-area: ov-num7;
+}
+
+.ov-percent7 {
+  grid-area: ov-percent7;
+}
+
+.yt-views {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 10px 35px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ov-paragrap8 ov-icon8"
+    "ov-num8 ov-percent8";
+  grid-area: yt-views;
+  padding: 1rem 2rem;
+  margin: 0 0 3rem 0;
+  border-radius: 5px;
+}
+
+.ov-paragrap8 {
+  grid-area: ov-paragrap8;
+}
+
+.ov-icon8 {
+  grid-area: ov-icon8;
+}
+
+.ov-num8 {
+  grid-area: ov-num8;
+}
+
+.ov-percent8 {
+  grid-area: ov-percent8;
+}
+.ov-paragraph {
+  color: var(--desaturated-blue);
+  align-self: center;
+  margin: 0;
+}
+.ov-num {
+  color: var(--white);
+  font-size: 2.5em;
+  margin: 0;
+}
+.ov-icon {
+  justify-self: end;
+  align-self: center;
+}
+.ov-percent {
+  justify-self: end;
+  align-self: center;
+}
+.fb-likes,
+.fb-views,
+.ig-likes,
+.ig-views,
+.twittr-likes,
+.twittr-retweets,
+.yt-likes,
+.yt-views {
+  background-color: var(--dark-desaturated-blue);
+}
 .attribution {
   font-size: 11px;
   text-align: center;
