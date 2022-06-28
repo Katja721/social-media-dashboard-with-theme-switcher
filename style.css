@@ -446,6 +446,9 @@ header {
   display: flex;
   align-items: center;
 }
+.arrow-diffrence {
+  margin: 0.2rem;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -520,5 +523,39 @@ header {
   .mode {
     justify-content: space-between;
     margin: 0 3rem 0 0;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 500px) {
+  header {
+    padding: 1rem 2rem 9rem 2rem;
+  }
+  .social-media {
+    margin: -7rem 2rem 2rem 2rem;
+  }
+  .overview-heading {
+    margin: 0 2rem -2rem 2rem;
+  }
+  .overview {
+    margin: 1rem 2rem;
+    gap: 13px 15px;
+  }
+  .ov-element {
+    padding: 0.5rem;
+  }
+  .ov-num {
+    align-self: end;
+    height: fit-content;
+  }
+  .ov-percent {
+    margin: 0;
+    font-size: 0.7em;
+  }
+  .stat {
+    padding: 1.5rem 1rem 1rem 1rem;
+    margin: 0 0.5rem;
+  }
+  .instagramBorder {
+    width: 20%;
+    left: 24.1rem;
   }
 }
