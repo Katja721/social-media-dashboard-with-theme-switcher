@@ -28,6 +28,7 @@ const circle = document.querySelector(".circle");
 const stats = document.querySelectorAll(".stat");
 const ovElements = document.querySelectorAll(".ov-element");
 const overviewHeading = document.querySelector(".overview-heading");
+const mediaPhone = window.matchMedia("(min-width: 600px)").matches;
 /* change backgound  color of body and header*/
 
 const changeMainBackground = function (bodyBackground, headerBackground) {
@@ -88,6 +89,9 @@ const activateMode = function () {
       "dark-grayish-blue"
     );
     changeTopParagraphs("dark-grayish-blue", "Light");
+    if (mediaPhone) {
+      mainHeading.style.borderBottom = `var(--desaturated-blue)`;
+    }
   } else {
     console.log("dark mode");
     changeMainBackground("very-dark-blue-bg", "very-dark-blue-topbg");
@@ -96,6 +100,9 @@ const activateMode = function () {
     changeStat("dark-desaturated-blue", "desaturated-blue", "white");
     changeOverview("dark-desaturated-blue", "white", "desaturated-blue");
     changeTopParagraphs("desaturated-blue", "Dark");
+    if (mediaPhone) {
+      mainHeading.style.borderBottom = `var(--dark-grayish-blue)`;
+    }
   }
 };
 switchBtn.addEventListener("click", function () {

@@ -453,3 +453,72 @@ header {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+@media screen and (max-width: 500px) {
+  body {
+    overflow: auto;
+    padding: 1.5rem;
+  }
+
+  .social-media {
+    margin: -4rem 0 0 0;
+    flex-direction: column;
+  }
+  .stat {
+    margin: 1rem 0;
+  }
+  .head {
+    flex-direction: column;
+  }
+  .mainHeading {
+    width: 85%;
+    padding: 2rem 0 3rem 0;
+    border-bottom: 1px solid var(--desaturated-blue);
+  }
+  .mode {
+    justify-content: space-between;
+    margin: 0 3rem 0 0;
+  }
+  .totalFollowers {
+    margin: -5rem 0;
+  }
+  .overview-heading {
+    margin: 2rem 0 0.5rem 0;
+  }
+  .overview {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "fb-views"
+      "fb-likes"
+      "ig-likes"
+      "ig-views"
+      "twittr-retweets"
+      "twittr-likes"
+      "yt-likes"
+      "yt-views";
+  }
+  .ov-element {
+    margin: 1rem 0 0 0;
+    padding: 1rem 2rem;
+  }
+  .ov-percent {
+    justify-self: end;
+    align-self: end;
+    text-align: end;
+    margin: 0;
+  }
+  header {
+    width: 114%;
+    margin: -2rem 0 0 -1.2rem;
+    padding: 0 0 14rem 1.5rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .mode {
+    justify-content: space-between;
+    margin: 0 3rem 0 0;
+  }
+}
